@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full w-full">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example socket.io</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full w-full">
+  <div class="flex w-full h-full flex-col p-4 gap-2">
+    <div class="flex gap-4 items-center">
+      <button class="px-4 py-2 rounded-lg border-2" id="1" onclick="updateEvent(this)">Event #1</button>
+      <span class="bg-green-600 w-10 h-10" id="target-1"></span>
+    </div>
+    <div class="flex gap-4 items-center">
+      <button class="px-4 py-2 rounded-lg border-2" id="2" onclick="updateEvent(this)">Event #2</button>
+      <span class="bg-green-600 w-10 h-10" id="target-2"></span>
+    </div>
+    <div class="flex gap-4 items-center">
+      <button class="px-4 py-2 rounded-lg border-2" id="3" onclick="updateEvent(this)">Event #3</button>
+      <span class="bg-red-600 w-10 h-10" id="target-3"></span>
+    </div>
+    <div class="flex gap-6 mt-10">
+      <div class="flex gap-2 items-center">
+        <span class="bg-green-600 w-10 h-10"></span>
+        <span class="font-bolder text-lg">OK</span>
+      </div>
+      <div class="flex gap-2 items-center">
+        <span class="bg-red-600 w-10 h-10"></span>
+        <span class="font-bolder text-lg">KO</span>
+      </div>
+    </div>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
